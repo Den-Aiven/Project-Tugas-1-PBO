@@ -10,16 +10,14 @@ public class CustomerPortofolio {
 
     public double saldo = 0;
 
-
     public void setorSaldo(double jumlah) {
         if (jumlah > 0) {
             saldo += jumlah;
             System.out.println("✅ Berhasil setor saldo sebesar Rp" + jumlah);
         } else {
-            System.out.println("⚠️ Jumlah setor harus lebih dari 0.");
+            System.out.println("⚠ Jumlah setor harus lebih dari 0.");
         }
     }
-
 
     public void tarikSaldo(double jumlah) {
         if (jumlah > 0) {
@@ -30,10 +28,9 @@ public class CustomerPortofolio {
                 System.out.println("❌ Saldo tidak mencukupi untuk penarikan.");
             }
         } else {
-            System.out.println("⚠️ Jumlah tarik harus lebih dari 0.");
+            System.out.println("⚠ Jumlah tarik harus lebih dari 0.");
         }
     }
-
 
     public void tampilkanSaldo() {
         System.out.println("💰 Saldo Anda saat ini: Rp" + saldo);
