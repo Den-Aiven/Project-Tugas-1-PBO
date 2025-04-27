@@ -15,43 +15,28 @@ public class SuratBerhargaNegara {
         this.kuotaNasional = kuotaNasional;
     }
 
-    // Getter & Setter
+    // Getter
     public String getNama() {
         return nama;
-    }
-
-    public void setNama(String nama) {
-        this.nama = nama;
     }
 
     public double getBunga() {
         return bunga;
     }
 
-    public void setBunga(double bunga) {
-        this.bunga = bunga;
-    }
-
     public int getJangkaWaktu() {
         return jangkaWaktu;
-    }
-
-    public void setJangkaWaktu(int jangkaWaktu) {
-        this.jangkaWaktu = jangkaWaktu;
     }
 
     public String getTanggalJatuhTempo() {
         return tanggalJatuhTempo;
     }
 
-    public void setTanggalJatuhTempo(String tanggalJatuhTempo) {
-        this.tanggalJatuhTempo = tanggalJatuhTempo;
-    }
-
     public double getKuotaNasional() {
         return kuotaNasional;
     }
 
+    // Setter
     public void setKuotaNasional(double kuotaNasional) {
         this.kuotaNasional = kuotaNasional;
     }
