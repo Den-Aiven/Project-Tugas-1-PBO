@@ -6,13 +6,17 @@ import util.DataStore;
 public class AdminView {
 
     private static void showAdminMenu() {
-        System.out.println("\n=== Admin Menu ===");
-        System.out.println("1. Tambah Saham");
-        System.out.println("2. Ubah Harga Saham");
-        System.out.println("3. Tambah SBN");
-        System.out.println("4. Lihat Daftar Produk Investasi");
-        System.out.println("5. Hapus Produk Investasi");
-        System.out.println("6. Logout");
+        System.out.println("\n======================================");
+        System.out.println("         ✨ ADMIN MENU ✨");
+        System.out.println("======================================");
+        System.out.println("1. ➤ Tambah Saham");
+        System.out.println("2. ➤ Ubah Harga Saham");
+        System.out.println("3. ➤ Tambah SBN");
+        System.out.println("4. ➤ Lihat Daftar Produk Investasi");
+        System.out.println("5. ➤ Hapus Produk Investasi");
+        System.out.println("6. ➤ Logout");
+        System.out.println("======================================");
+        System.out.print("Pilih menu (1-6): ");
     }
 
     public static void menuAdmin() {
