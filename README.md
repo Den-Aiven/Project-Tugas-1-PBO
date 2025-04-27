@@ -1,14 +1,15 @@
-# Project-Tugas-1-PBO
-# Program Investasi Java
-Halo! Ini adalah proyek simulasi investasi yang dibuat menggunakan Java demi menuntaskan Tugas I PBO. Program ini dibuat untuk mempermudah pengguna (Customer dan Admin) dalam melakukan transaksi, simulasi, dan pengelolaan portofolio investasi, baik dalam bentuk saham maupun Surat Berharga Negara (SBN).
+# Program Investasi Saham & SBN - Tugas 1 PBO
+Halo! Ini adalah proyek simulasi investasi yang dibuat menggunakan Java demi menuntaskan Tugas I PBO. Program ini dibuat untuk mempermudah pengguna (Customer dan Admin) dalam melakukan transaksi, simulasi, dan pengelolaan portofolio investasi, baik dalam bentuk saham maupun Surat Berharga Negara (SBN). Selain itu, simulasi investasi ini hanya berbasis console yang dibangun menggunakan Java (tanpa database). Program ini memiliki fitur pengelolaan portofolio dan simulasi hasil investasi.
+
+---
 
 ##  Jenis Pengguna
 Program mendukung dua jenis user: 
-- Admin
+- Fitur Admin
   - Menambah & menghapus produk investasi (saham/SBN)
   - Mengubah harga saham
   - Melihat daftar semua produk investasi
-- Customer
+- Fitur Customer
   - Membeli & menjual saham
   - Membeli SBN
   - Simulasi investasi SBN
@@ -16,24 +17,40 @@ Program mendukung dua jenis user:
   - Setor dan tarik saldo
  
 ## Struktur Program
-- model
-  - Saham
-  - SuratBerhargaNegara
-  - CustomerPortofolio
-- service
-  - AdminService: logika untuk fitur admin
-  - CustomerService: logika untuk fitur customer
-- util
-  - DataStore: penyimpanan data seperti daftar saham & SBN
-  - Validasi: utilitas untuk validasi input
-- view
-  - AdminView
-  - CustomerView
-  - MenuView
+
+- `model/`
+  - `Saham`
+  - `SuratBerhargaNegara`
+  - `CustomerPortofolio`
+- `service/`
+  - `AdminService` – logika untuk fitur admin
+  - `CustomerService` – logika untuk fitur customer
+- `util/`
+  - `DataStore` – penyimpanan data sementara
+  - `Validasi` – utilitas untuk validasi input
+- `view/`
+  - `AdminView`
+  - `CustomerView`
+  - `MenuView`
 
 ## Identitas Pengembang
-- Nama: I Made Ivan Ari Mahayana NIM: 2405551015 Matkul: PBO (E)
-- Nama: I Putu Weda Sidhi Putra NIM: 2405551164 Matkul: PBO (E)
+- **I Made Ivan Ari Mahayana**  
+  NIM: 2405551015  
+  Kelas: PBO (E)
+
+- **I Putu Weda Sidhi Putra**  
+  NIM: 2405551164  
+  Kelas: PBO (E)
+
+## Bagaimana Program Dijalankan
+
+Program ini dijalankan dengan menerapkan prinsip-prinsip **Object Oriented Programming (OOP)**, antara lain:
+
+- **Penggunaan Class dan Object**: Program dibagi ke dalam berbagai class sesuai tanggung jawabnya seperti `Saham`, `SBN`, `CustomerPortofolio`, dsb.
+- **Flow Control**: Menggunakan `while`, `try`, `if-else`, dan `switch-case` untuk pengaturan alur logika program.
+- **ArrayList / HashMap**: Digunakan untuk menyimpan daftar produk saham, SBN, dan portofolio pengguna secara dinamis menggunakan `Map<String, T>`.
+- **Nested Class**: Beberapa class ditulis secara terstruktur dan modular untuk menjaga keterpisahan logika.
+- **Encapsulation**: Properti dari objek disembunyikan (private) dan diakses melalui getter-setter untuk keamanan dan modularitas.
 
 # UML
 ![UML drawio](https://github.com/user-attachments/assets/94f9d592-9428-465e-beaa-10f5cd658e5e)
