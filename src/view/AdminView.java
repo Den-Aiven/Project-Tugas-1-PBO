@@ -1,7 +1,7 @@
 package view;
 
 import service.AdminService;
-import util.DataStore;
+import util.Validasi;
 
 public class AdminView {
 
@@ -24,8 +24,7 @@ public class AdminView {
         while (isRunning) {
             showAdminMenu();
             System.out.print("Pilih menu: ");
-            int pilihan = inputInteger();
-
+            int pilihan = Validasi.inputInteger();
             switch (pilihan) {
                 case 1:
                     AdminService.tambahSaham();
@@ -49,15 +48,6 @@ public class AdminView {
                 default:
                     System.out.println("⚠ Pilihan tidak valid. Silakan coba lagi.");
             }
-        }
-    }
-
-    private static int inputInteger() {
-        try {
-            return Integer.parseInt(DataStore.scanner.nextLine());
-        } catch (NumberFormatException e) {
-            System.out.println("⚠ Input harus berupa angka!");
-            return -1;
         }
     }
 }
