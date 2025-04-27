@@ -1,9 +1,13 @@
-import service.*;
+//import service.*;
 import util.DataStore;
 import model.CustomerPortofolio;
+import view.MenuView;
+import view.CustomerView;
+import view.AdminView;
 
 public class main {
     public static void main(String[] args) {
+        // Setup data awal
         DataStore.akun.put("admin", "admin123");
         DataStore.role.put("admin", "admin");
         DataStore.akun.put("user", "user123");
@@ -11,19 +15,50 @@ public class main {
         DataStore.portofolios.put("user", new CustomerPortofolio());
 
         while (true) {
-            System.out.println("===== MENU UTAMA =====");
-            System.out.print("Username: ");
-            String user = DataStore.scanner.nextLine();
-            System.out.print("Password: ");
-            String pass = DataStore.scanner.nextLine();
+            MenuView.showMainMenu();
+            String pilihan = DataStore.scanner.nextLine();
 
-            if (DataStore.akun.containsKey(user) && DataStore.akun.get(user).equals(pass)) {
-                DataStore.currentUser = user;
-                if (DataStore.role.get(user).equals("admin")) AdminService.menuAdmin();
-                else CustomerService.menuCustomer();
-            } else {
-                System.out.println("Login gagal!");
+            switch (pilihan) {
+                case "1":
+                    loginSebagaiAdmin();
+                    break;
+                case "2":
+                    loginSebagaiCustomer();
+                    break;
+                case "0":
+                    System.out.println("Keluar dari program...");
+                    System.exit(0);
+                default:
+                    System.out.println("Pilihan tidak valid!");
             }
+        }
+    }
+
+    private static void loginSebagaiAdmin() {
+        System.out.print("Username Admin: ");
+        String user = DataStore.scanner.nextLine();
+        System.out.print("Password: ");
+        String pass = DataStore.scanner.nextLine();
+
+        if (DataStore.akun.containsKey(user) && DataStore.akun.get(user).equals(pass) && DataStore.role.get(user).equals("admin")) {
+            AdminView.menuAdmin();
+        } else {
+            System.out.println("Login admin gagal!");
+        }
+    }
+
+
+    private static void loginSebagaiCustomer() {
+        System.out.print("Username Customer: ");
+        String user = DataStore.scanner.nextLine();
+        System.out.print("Password: ");
+        String pass = DataStore.scanner.nextLine();
+
+        if (DataStore.akun.containsKey(user) && DataStore.akun.get(user).equals(pass) && DataStore.role.get(user).equals("customer")) {
+            DataStore.currentUser = user;
+            CustomerView.showCustomerMenu();
+        } else {
+            System.out.println("Login customer gagal!");
         }
     }
 }
