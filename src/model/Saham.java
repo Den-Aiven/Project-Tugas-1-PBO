@@ -11,13 +11,13 @@ public class Saham {
         this.harga = harga;
     }
 
-//    public String getKode() {
-//        return kode;
-//    }
-//
-//    public String getNamaPerusahaan() {
-//        return namaPerusahaan;
-//    }
+    public String getKode() {
+        return kode;
+    }
+
+    public String getNamaPerusahaan() {
+        return namaPerusahaan;
+    }
 
     public double getHarga() {
         return harga;
@@ -29,6 +29,6 @@ public class Saham {
 
     @Override
     public String toString() {
-        return String.format("%s - %s - Rp%.2f", kode, namaPerusahaan, harga);
+        return String.format("%s - %s - Rp%.2f", kode, namaPerusahaan,harga);
     }
 }
