@@ -1,5 +1,5 @@
 # Program Investasi Saham & SBN - Tugas 1 PBO
-Halo! Ini adalah proyek simulasi investasi yang dibuat menggunakan Java demi menuntaskan Tugas I PBO. Program ini dibuat untuk mempermudah pengguna (Customer dan Admin) dalam melakukan transaksi, simulasi, dan pengelolaan portofolio investasi, baik dalam bentuk saham maupun Surat Berharga Negara (SBN). Selain itu, simulasi investasi ini hanya berbasis console yang dibangun menggunakan Java (tanpa database). Program ini memiliki fitur pengelolaan portofolio dan simulasi hasil investasi.
+Hi! Ini adalah Program investasi Saham dan SBN berbasis console yang dibangun menggunakan Java untuk menyelesaikan Tugas 1 mata kuliah Pemrograman Berorientasi Objek (PBO). Program ini dirancang untuk mempermudah dua jenis pengguna Admin dan Customer dalam melakukan transaksi, simulasi, serta pengelolaan portofolio investasi, baik dalam bentuk Saham maupun Surat Berharga Negara (SBN). Seluruh proses berjalan tanpa menggunakan database (non-persistent), dan semua interaksi dilakukan melalui antarmuka berbasis teks (console). Program ini juga dilengkapi dengan fitur simulasi hasil investasi dan pengelolaan portofolio secara menyeluruh.
 
 ---
 
