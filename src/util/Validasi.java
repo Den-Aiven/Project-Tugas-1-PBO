@@ -3,68 +3,33 @@ package util;
 import java.util.Scanner;
 
 public class Validasi {
-    private static final Scanner scanner = new Scanner(System.in);
+    private static final Scanner sc = new Scanner(System.in);
 
-    // Method untuk input angka bulat (integer)
-    public static int inputInteger(String label) {
-        while (true) {
-            System.out.print(label);
-            String input = scanner.nextLine();
-            if (input.equals("0")) return 0;  // Untuk kasus keluar dari input
-            try {
-                return Integer.parseInt(input);
-            } catch (NumberFormatException e) {
-                System.out.println("⚠ Peringatan: Pilihan harus berupa angka.");
-            }
-        }
+    public static String inputString(String label) {
+        System.out.print(label);
+        return sc.nextLine();  // Langsung kembalikan hasil dari sc.nextLine()
     }
 
-    // Method untuk input angka desimal (positif)
-    public static double inputDouble(String label) {
-        while (true) {
-            System.out.print(label);
-            String input = scanner.nextLine();
-            if (input.equals("0")) return -1;  // Untuk kasus keluar dari input
-            try {
-                double value = Double.parseDouble(input);
-                if (value < 0) {
-                    System.out.println("⚠ Peringatan: Input harus lebih dari 0.");
-                    continue;
-                }
-                return value;
-            } catch (NumberFormatException e) {
-                System.out.println("⚠ Peringatan: Input harus berupa angka desimal.");
-            }
-        }
-    }
-
-    // Method untuk input angka bulat (integer) dengan validasi positif
     public static int inputAngka(String label) {
         while (true) {
             System.out.print(label);
-            String input = scanner.nextLine();
+            String input = sc.nextLine();  // Hanya baca input sekali
             if (input.equals("0")) return 0;
             try {
-                int value = Integer.parseInt(input);
-                if (value <= 0) {
-                    System.out.println("⚠ Input harus berupa angka positif.");
-                    continue;
-                }
-                return value;
+                return Integer.parseInt(input);  // Langsung gunakan input
             } catch (NumberFormatException e) {
                 System.out.println("⚠ Input harus berupa angka bulat.");
             }
         }
     }
 
-    // Method untuk input angka desimal positif dengan validasi
     public static double inputDoublePositif(String label) {
         while (true) {
             System.out.print(label);
-            String input = scanner.nextLine();
+            String input = sc.nextLine();  // Hanya baca input sekali
             if (input.equals("0")) return -1;
             try {
-                double value = Double.parseDouble(input);
+                double value = Double.parseDouble(input);  // Langsung gunakan input
                 if (value < 0) {
                     System.out.println("⚠ Input harus lebih dari 0.");
                     continue;
@@ -76,40 +41,29 @@ public class Validasi {
         }
     }
 
-
-    public static String inputString(String label) {
-        System.out.print(label);
-        return scanner.nextLine();
+    public static boolean isKodeSahamExist(String kode) {
+        return util.DataStore.daftarSaham.containsKey(kode);
     }
 
-    // Validasi untuk memastikan nilai positif
-//    public static boolean isValidPositiveAmount(double amount) {
-//        return amount > 0;
-//    }
-
-    // Validasi untuk memastikan angka positif
-//    public static boolean isValidPositiveInteger(int number) {
-//        return number > 0;
-//    }
-
-    // Validasi untuk kode saham yang valid
-    public static boolean isValidSahamCode(String kode) {
-        return DataStore.daftarSaham.containsKey(kode);
+    public static boolean isNamaSBNExist(String nama) {
+        return util.DataStore.daftarSBN.containsKey(nama);
     }
 
-    // Validasi untuk nama SBN yang valid
-//    public static boolean isValidSBNCode(String nama) {
-//        return DataStore.daftarSBN.containsKey(nama);
-//    }
+    public static double inputDouble() {
+        try {
+            return Double.parseDouble(DataStore.scanner.nextLine());  // Langsung parse input
+        } catch (NumberFormatException e) {
+            System.out.println("Peringatan: Input harus berupa angka desimal.");
+            return -1;
+        }
+    }
 
-    // Validasi untuk memeriksa apakah kode saham sudah terdaftar
-//    public static boolean isValidSahamCodeExist(String kode) {
-//        return DataStore.daftarSaham.containsKey(kode);
-//    }
-
-
-    // Validasi untuk memeriksa apakah nama SBN sudah terdaftar
-//    public static boolean isValidSBNNameExist(String nama) {
-//        return DataStore.daftarSBN.containsKey(nama);
-//    }
+    public static int inputInteger() {
+        try {
+            return Integer.parseInt(DataStore.scanner.nextLine());  // Langsung parse input
+        } catch (NumberFormatException e) {
+            System.out.println("Peringatan: Pilihan harus berupa angka.");
+            return -1;
+        }
+    }
 }
