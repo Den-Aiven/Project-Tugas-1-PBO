@@ -3,6 +3,7 @@ package view;
 import service.CustomerService;
 import util.DataStore;
 import model.CustomerPortofolio;
+import util.Validasi;
 
 public class CustomerView {
     public static void showCustomerMenu() {
@@ -21,7 +22,7 @@ public class CustomerView {
             System.out.println("======================================");
             System.out.print("Pilih menu (1-8): ");
 
-            int pilih = inputInteger();
+            int pilih = Validasi.inputInteger();
             if (pilih == -1) continue;
 
             CustomerPortofolio portofolio = DataStore.portofolios.get(DataStore.currentUser);
@@ -55,15 +56,6 @@ public class CustomerView {
                     break;
             }
 
-        }
-    }
-
-    private static int inputInteger() {
-        try {
-            return Integer.parseInt(DataStore.scanner.nextLine());
-        } catch (NumberFormatException e) {
-            System.out.println("Peringatan: Harus angka!");
-            return -1;
         }
     }
 }
