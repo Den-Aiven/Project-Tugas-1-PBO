@@ -7,16 +7,16 @@ public class Validasi {
 
     public static String inputString(String label) {
         System.out.print(label);
-        return sc.nextLine();  // Langsung kembalikan hasil dari sc.nextLine()
+        return sc.nextLine();
     }
 
     public static int inputAngka(String label) {
         while (true) {
             System.out.print(label);
-            String input = sc.nextLine();  // Hanya baca input sekali
+            String input = sc.nextLine();
             if (input.equals("0")) return 0;
             try {
-                return Integer.parseInt(input);  // Langsung gunakan input
+                return Integer.parseInt(input);
             } catch (NumberFormatException e) {
                 System.out.println("⚠ Input harus berupa angka bulat.");
             }
@@ -26,10 +26,10 @@ public class Validasi {
     public static double inputDoublePositif(String label) {
         while (true) {
             System.out.print(label);
-            String input = sc.nextLine();  // Hanya baca input sekali
+            String input = sc.nextLine();
             if (input.equals("0")) return -1;
             try {
-                double value = Double.parseDouble(input);  // Langsung gunakan input
+                double value = Double.parseDouble(input);
                 if (value < 0) {
                     System.out.println("⚠ Input harus lebih dari 0.");
                     continue;
@@ -51,7 +51,7 @@ public class Validasi {
 
     public static double inputDouble() {
         try {
-            return Double.parseDouble(DataStore.scanner.nextLine());  // Langsung parse input
+            return Double.parseDouble(DataStore.scanner.nextLine());
         } catch (NumberFormatException e) {
             System.out.println("Peringatan: Input harus berupa angka desimal.");
             return -1;
@@ -60,7 +60,7 @@ public class Validasi {
 
     public static int inputInteger() {
         try {
-            return Integer.parseInt(DataStore.scanner.nextLine());  // Langsung parse input
+            return Integer.parseInt(DataStore.scanner.nextLine());
         } catch (NumberFormatException e) {
             System.out.println("Peringatan: Pilihan harus berupa angka.");
             return -1;
