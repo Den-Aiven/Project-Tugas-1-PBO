@@ -33,7 +33,6 @@ public class main {
             }
         }
     }
-<<<<<<< HEAD
 
 
     private static void loginSebagaiAdmin() {
@@ -64,9 +63,3 @@ public class main {
         }
     }
 }
-
-
-
-=======
-}
->>>>>>> 9cffc6b05fa26038bc59728926f3761991e12625
