@@ -7,7 +7,7 @@ import view.AdminView;
 
 public class main {
     public static void main(String[] args) {
-        // Setup data awal
+
         DataStore.akun.put("admin", "admin123");
         DataStore.role.put("admin", "admin");
         DataStore.akun.put("user", "user123");
