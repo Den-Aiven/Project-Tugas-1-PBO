@@ -1,8 +1,9 @@
 package model;
 
 public class Saham {
-    public String kode, namaPerusahaan;
-    public double harga;
+    private String kode;
+    private String namaPerusahaan;
+    private double harga;
 
     public Saham(String kode, String namaPerusahaan, double harga) {
         this.kode = kode;
@@ -10,7 +11,24 @@ public class Saham {
         this.harga = harga;
     }
 
+//    public String getKode() {
+//        return kode;
+//    }
+//
+//    public String getNamaPerusahaan() {
+//        return namaPerusahaan;
+//    }
+
+    public double getHarga() {
+        return harga;
+    }
+
+    public void setHarga(double harga) {
+        this.harga = harga;
+    }
+
+    @Override
     public String toString() {
-        return kode + " - " + namaPerusahaan + " - Rp" + harga;
+        return String.format("%s - %s - Rp%.2f", kode, namaPerusahaan, harga);
     }
 }
