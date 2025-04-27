@@ -26,8 +26,6 @@ public class CustomerService {
                 System.out.println("❌ Saldo tidak mencukupi. Dibutuhkan: Rp" + total + ", Saldo Anda: Rp" + p.getSaldo());
                 return;
             }
-
-            // Update data di portofolio
             p.getSahamDimiliki().put(kode, p.getSahamDimiliki().getOrDefault(kode, 0) + jumlah);
             p.getNominalPembelianSaham().put(kode, p.getNominalPembelianSaham().getOrDefault(kode, 0.0) + total);
             p.setSaldo(p.getSaldo() - total);
