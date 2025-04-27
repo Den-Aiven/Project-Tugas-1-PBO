@@ -35,9 +35,9 @@ Program mendukung dua jenis user:
 - Nama: I Made Ivan Ari Mahayana NIM: 2405551015 Matkul: PBO (E)
 - Nama: I Putu Weda Sidhi Putra NIM: 2405551164 Matkul: PBO (E)
 
-## UML
----------
---------
+# UML
+![UML drawio](https://github.com/user-attachments/assets/94f9d592-9428-465e-beaa-10f5cd658e5e)
+
 
 # Penggunaan Program Saham SBN
 Berikut ini adalah penjelasan mengenai penggunaan program Investasi Saham SBN beserta hasil screenshot yang sesuai. Beberapa penjelasan berikut menunjukkan bagaimana kode program berjalan.
