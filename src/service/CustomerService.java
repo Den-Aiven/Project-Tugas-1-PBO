@@ -134,7 +134,6 @@ public class CustomerService {
         System.out.println("\n--- Portofolio Saham ---");
         for (String kode : p.getSahamDimiliki().keySet()) {
             int jumlahSekarang = p.getSahamDimiliki().get(kode);
-//            double totalBeli = p.getNominalPembelianSaham().get(kode);
             double hargaSekarang = DataStore.daftarSaham.get(kode).getHarga();
             double nilaiPasar = hargaSekarang * jumlahSekarang;
             System.out.printf("%s: %d lembar, Nilai Pasar: Rp%.2f", kode, jumlahSekarang, nilaiPasar);
