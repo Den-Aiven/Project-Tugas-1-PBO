@@ -1,5 +1,8 @@
 # Program Investasi Saham & SBN - Tugas 1 PBO
-Hi! Ini adalah Program investasi Saham dan SBN berbasis console yang dibangun menggunakan Java untuk menyelesaikan Tugas 1 mata kuliah Pemrograman Berorientasi Objek (PBO). Program ini dirancang untuk mempermudah dua jenis pengguna Admin dan Customer dalam melakukan transaksi, simulasi, serta pengelolaan portofolio investasi, baik dalam bentuk Saham maupun Surat Berharga Negara (SBN). Seluruh proses berjalan tanpa menggunakan database (non-persistent), dan semua interaksi dilakukan melalui antarmuka berbasis teks (console). Program ini juga dilengkapi dengan fitur simulasi hasil investasi dan pengelolaan portofolio secara menyeluruh.
+Selamat datang!
+Ini adalah Program Investasi Saham dan Surat Berharga Negara (SBN) berbasis console yang dikembangkan menggunakan Java untuk memenuhi Tugas 1 mata kuliah Pemrograman Berorientasi Objek (PBO).
+Program ini dirancang untuk mempermudah dua jenis pengguna (Admin dan Customer) dalam mengelola transaksi, simulasi investasi, serta portofolio.
+Semua interaksi dilakukan melalui antarmuka teks (console) dan data disimpan secara non-persistent (tanpa database).
 
 ---
 
@@ -19,9 +22,9 @@ Program mendukung dua jenis user:
 ## Struktur Program
 
 - `model/`
-  - `Saham`
-  - `SuratBerhargaNegara`
-  - `CustomerPortofolio`
+  - `Saham` - atribut saham (kode, nama, harga) dan metode untuk mengakses/mengubah data.
+  - `SuratBerhargaNegara` - surat Berharga Negara (SBN), meliputi kode, nama produk, jangka waktu, dan imbal hasil.
+  - `CustomerPortofolio` - data portofolio investasi customer, termasuk kepemilikan saham, SBN, dan saldo.
 - `service/`
   - `AdminService` – logika untuk fitur admin
   - `CustomerService` – logika untuk fitur customer
@@ -29,9 +32,10 @@ Program mendukung dua jenis user:
   - `DataStore` – penyimpanan data sementara
   - `Validasi` – utilitas untuk validasi input
 - `view/`
-  - `AdminView`
-  - `CustomerView`
-  - `MenuView`
+  - `AdminView` - console untuk Admin dalam mengelola produk investasi.
+  - `CustomerView` - console untuk Customer dalam melakukan transaksi dan mengelola portofolio.
+  - `MenuView` - menu login awal dan mengarahkan user ke tampilan Admin atau Customer berdasarkan role.
+- `Main` - Entry point aplikasi, menjalankan program dan memanggil menu utama (MenuView).
 
 ## Identitas Pengembang
 - **I Made Ivan Ari Mahayana**  
@@ -53,7 +57,8 @@ Program ini dijalankan dengan menerapkan prinsip-prinsip **Object Oriented Progr
 - **Encapsulation**: Properti dari objek disembunyikan (private) dan diakses melalui getter-setter untuk keamanan dan modularitas.
 
 # UML
-![UML drawio](https://github.com/user-attachments/assets/94f9d592-9428-465e-beaa-10f5cd658e5e)
+![UML drawio](https://github.com/user-attachments/assets/1d01cc24-149c-4bea-a24e-4fcf911437f6)
+
 
 
 # Penggunaan Program Saham SBN
