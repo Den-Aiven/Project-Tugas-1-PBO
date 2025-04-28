@@ -23,7 +23,7 @@ public class CustomerService {
             double total = s.getHarga() * jumlah;
 
             if (total > p.getSaldo()) {
-                System.out.println("❌ Saldo tidak mencukupi. Dibutuhkan: Rp" + total + ", Saldo Anda: Rp" + p.getSaldo());
+                System.out.printf("❌ Saldo tidak mencukupi. Dibutuhkan: Rp%.2f, Saldo Anda: Rp%.2f", total, p.getSaldo());
                 return;
             }
             p.getSahamDimiliki().put(kode, p.getSahamDimiliki().getOrDefault(kode, 0) + jumlah);
@@ -83,7 +83,9 @@ public class CustomerService {
             SuratBerhargaNegara sbn = DataStore.daftarSBN.get(nama);
 
             if (nominal > p.getSaldo()) {
-                System.out.println("❌ Saldo tidak mencukupi. Dibutuhkan: Rp" + nominal + ", Saldo Anda: Rp" + p.getSaldo());
+                System.out.printf("❌ Saldo tidak mencukupi. Dibutuhkan: Rp%,.2f, Saldo Anda: Rp%,.2f%n", nominal, p.getSaldo());
+
+
                 return;
             }
 
