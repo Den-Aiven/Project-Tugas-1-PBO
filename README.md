@@ -32,6 +32,7 @@ Program mendukung dua jenis user:
   - `AdminView`
   - `CustomerView`
   - `MenuView`
+- `Main`
 
 ## Identitas Pengembang
 - **I Made Ivan Ari Mahayana**  
@@ -53,7 +54,8 @@ Program ini dijalankan dengan menerapkan prinsip-prinsip **Object Oriented Progr
 - **Encapsulation**: Properti dari objek disembunyikan (private) dan diakses melalui getter-setter untuk keamanan dan modularitas.
 
 # UML
-![UML drawio](https://github.com/user-attachments/assets/94f9d592-9428-465e-beaa-10f5cd658e5e)
+![UML drawio](https://github.com/user-attachments/assets/1d01cc24-149c-4bea-a24e-4fcf911437f6)
+
 
 
 # Penggunaan Program Saham SBN
