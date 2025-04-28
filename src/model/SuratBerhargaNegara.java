@@ -16,9 +16,6 @@ public class SuratBerhargaNegara {
     }
 
     // Getter
-    public String getNama() {
-        return nama;
-    }
 
     public double getBunga() {
         return bunga;
@@ -26,10 +23,6 @@ public class SuratBerhargaNegara {
 
     public int getJangkaWaktu() {
         return jangkaWaktu;
-    }
-
-    public String getTanggalJatuhTempo() {
-        return tanggalJatuhTempo;
     }
 
     public double getKuotaNasional() {
@@ -43,6 +36,6 @@ public class SuratBerhargaNegara {
 
     @Override
     public String toString() {
-        return nama + " - Bunga: " + bunga + "% - Kuota: Rp" + kuotaNasional;
+        return String.format("%s - Bunga: %.2f%% - Kuota: Rp%s", nama, bunga, kuotaNasional);
     }
 }
