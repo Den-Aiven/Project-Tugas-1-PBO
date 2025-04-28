@@ -5,7 +5,7 @@ import view.MenuView;
 import view.CustomerView;
 import view.AdminView;
 
-public class main {
+public class Main {
     public static void main(String[] args) {
 
         DataStore.akun.put("admin", "admin123");
