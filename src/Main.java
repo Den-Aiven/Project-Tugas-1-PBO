@@ -1,4 +1,3 @@
-//import service.*;
 import util.DataStore;
 import model.CustomerPortofolio;
 import view.MenuView;

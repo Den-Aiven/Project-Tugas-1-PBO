@@ -16,7 +16,6 @@ public class SuratBerhargaNegara {
     }
 
     // Getter
-
     public double getBunga() {
         return bunga;
     }
